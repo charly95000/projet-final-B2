@@ -27,7 +27,7 @@ const Home = ()=>{
                     <td>{a.imageUrl}</td>
                     <td>Lien Voir</td>
                     <td><Link to={`/article/update/${a._id}`}>Modifier</Link></td>
-                    <td>Lien supprimer</td>
+                    <td><Link to={`/article/delete/${a._id}`}>Supprimer</Link></td>
                 </tr>
             ))}
         </table>

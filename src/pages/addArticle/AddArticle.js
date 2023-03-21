@@ -15,6 +15,7 @@ const CreateArticle = ()=>{
     formData.append("categoryId",category)
     const [categories,errorCategories,isLoadingCategories,refreshCategories] = useAxiosGet('https://apib2-production.up.railway.app/category')
     const [data, error, isLoading,postData] = useAxiosPost('https://apib2-production.up.railway.app/article',formData,{headers:{'Content-Type': 'multipart/form-data'}})
+    //const [data, error, isLoading,postData] = useAxiosPost('https://apib2-production.up.railway.app/article',{name})
     const handleSubmit = (e)=>{
         e.preventDefault();
         postData()
