@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { Link } from 'react-router-dom'
 import useAxiosGet from '../../hooks/useAxiosGet'
 
 const Home = ()=>{
@@ -25,7 +26,7 @@ const Home = ()=>{
                     <td>{a.categoryId.name}</td>
                     <td>{a.imageUrl}</td>
                     <td>Lien Voir</td>
-                    <td>Lien modifier</td>
+                    <td><Link to={`/article/update/${a._id}`}>Modifier</Link></td>
                     <td>Lien supprimer</td>
                 </tr>
             ))}
